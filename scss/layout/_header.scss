@@ -1,0 +1,103 @@
+// ===== HEADER ===== //
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  z-index: 99;
+}
+
+// ===== NAVBAR STYLE ===== //
+.navbar {
+  @include wrapper(90%, 0 auto);
+  @include flexBox(space-between, center);
+
+  // ===== BRAND ===== //
+  &-brand {
+    @include flexBox(center, center);
+    gap: 1rem;
+
+    &__text {
+      display: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      // MEDIA QUERY
+      @include laptop {
+        display: block;
+      }
+    }
+  }
+
+  // ===== MENU ===== //
+  &-menu {
+    display: none;
+
+    // MEDIA QUERY
+    @include laptop {
+      @include flexBox(center, center);
+      gap: 1rem;
+    }
+
+    &__link {
+      text-transform: capitalize;
+    }
+  }
+
+  // ===== ACTION ===== //
+  &-action {
+    @include flexBox(center, center);
+    gap: 1rem;
+  }
+
+  // ===== SEARCH ===== //
+  &-search {
+    @include flexBox(center, center);
+    gap: 0.5rem;
+
+    &__icon {
+      font-size: 1.2rem;
+    }
+
+    &__text {
+      font-size: 1.2rem;
+      display: none;
+
+      // MEDIA QUERY
+      @include laptop {
+        display: block;
+      }
+    }
+  }
+
+  // ===== BTN ===== //
+  &-btn {
+    display: block;
+
+    // MEDIA QUERY
+    @include laptop {
+      display: none;
+    }
+
+    .menu-btn {
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      z-index: 9999999999999;
+
+      &__line {
+        width: 30px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background-color: #fff;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

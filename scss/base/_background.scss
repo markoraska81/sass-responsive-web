@@ -1,0 +1,80 @@
+@import './config';
+
+// ===== BACKGROUND STYLE ===== //
+.bcg {
+  // ===== HEADER ===== //
+  &-header {
+    @include set-background($green);
+  }
+
+  // ===== SECTION ===== //
+  &-home {
+    @include set-background($bcg-color);
+    h2,
+    h3 {
+      color: $green;
+    }
+  }
+
+  &-adventure {
+    @include set-background(transparent);
+    h2 {
+      color: #fff;
+    }
+    h4 {
+      font-size: clamp(1rem, calc(5vw + 1rem), 1.18rem);
+      text-transform: uppercase;
+      color: #1f5d6a;
+    }
+  }
+
+  &-populars {
+    @include set-background(transparent);
+    h2 {
+      color: $green;
+    }
+  }
+
+  // ===== ADVENTURE CARD ===== //
+  &-adventure-card {
+    @include set-background(#fff);
+    i {
+      font-size: 3rem;
+      color: $green;
+    }
+  }
+
+  // ===== FAVORITES CARD ===== //
+  &-sea {
+    @include set-background(#fff);
+    .box__title {
+      color: $green;
+      margin: 2rem 0;
+    }
+  }
+
+  &-snow {
+    @include set-background($green);
+    .box__title {
+      color: #fff;
+      margin: 2rem 0;
+    }
+  }
+
+  &-forrest {
+    @include set-background(#fff);
+    .box__title {
+      color: $green;
+      margin: 2rem 0;
+    }
+  }
+
+  // ===== FOOTER ===== //
+  &-footer {
+    @include set-background($green);
+  }
+
+  &-footer-bottom {
+    @include set-background(darken($green, 15));
+  }
+}

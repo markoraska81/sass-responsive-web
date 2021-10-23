@@ -1,0 +1,41 @@
+// ===== HOME STYLE ===== //
+
+// ===== HERO ===== //
+.hero {
+  @include wrapper(90%, 0 auto);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  align-content: stretch;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+
+  // MEDIA QUERY
+  @include tablet {
+    margin-top: 3rem;
+  }
+  @include laptop {
+    flex-direction: row;
+    padding-bottom: 3rem;
+  }
+
+  // ===== HERO LEFT ===== //
+  .hero-left {
+    @include laptop {
+      flex: 1 1;
+      max-width: 50%;
+    }
+  }
+  // ===== HERO RIGHT ===== //
+  .hero-right {
+    @include laptop {
+      flex: 1;
+      max-width: 50%;
+      margin-top: 0;
+    }
+  }
+
+  .desc {
+    margin-bottom: 1rem;
+  }
+}

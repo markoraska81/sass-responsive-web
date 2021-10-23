@@ -1,0 +1,54 @@
+// ===== SECTION POPULARS STYLE ===== //
+
+// ===== POPULARS BOX ===== //
+.populars-box {
+  @include wrapper(85%, 0 auto);
+  @include flexBox(center, center);
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+// ===== POPULAR CARD ===== //
+.popular-card {
+  flex-basis: 30%;
+  min-width: 20em;
+  overflow: hidden;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  }
+
+  &:nth-child(2) > div > p {
+    color: #fff;
+  }
+
+  img {
+    transform: skewY(-5deg);
+    transform-origin: left;
+    fill: #1f5d6a;
+  }
+
+  p {
+    @include wrapper(80%, 0 auto);
+    color: #1f5d6a;
+    font-size: 1rem;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 1px solid #e0dede;
+
+    &:last-child {
+      margin-bottom: 2rem;
+      border-bottom: 0;
+    }
+  }
+}
+
+// ===== BTN BOX ===== //
+.section-btn {
+  @include flexBox(center, center);
+  margin: 3rem 0;
+}
