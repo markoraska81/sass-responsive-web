@@ -1,5 +1,7 @@
 // ===== SECTION POPULARS STYLE ===== //
-
+.populars {
+  margin-top: 0;
+}
 // ===== POPULARS BOX ===== //
 .populars-box {
   @include wrapper(85%, 0 auto);
@@ -25,15 +27,8 @@
     color: #fff;
   }
 
-  img {
-    transform: skewY(-5deg);
-    transform-origin: left;
-    fill: #1f5d6a;
-  }
-
   p {
     @include wrapper(80%, 0 auto);
-    color: #1f5d6a;
     font-size: 1rem;
     margin-bottom: 0;
     text-align: center;
@@ -44,6 +39,10 @@
       margin-bottom: 2rem;
       border-bottom: 0;
     }
+  }
+
+  &__heading {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   }
 }
 

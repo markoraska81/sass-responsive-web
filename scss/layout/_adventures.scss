@@ -6,8 +6,9 @@
     size: cover;
     blend-mode: multiply;
   }
-  transform: skewY(-3.5deg);
+  margin-top: 0;
   padding: 2rem 0 3rem;
+  clip-path: polygon(0 3%, 100% 0, 100% 97%, 0 100%);
 
   &::before {
     content: '';
@@ -24,7 +25,7 @@
   .section-heading,
   .section-body {
     @include wrapper(90%, 0 auto);
-    transform: skewY(3.5deg);
+    // transform: skewY(3.5deg);
     text-align: center;
   }
 }
