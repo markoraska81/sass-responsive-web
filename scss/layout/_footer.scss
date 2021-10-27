@@ -19,12 +19,19 @@
     padding: 1rem 0;
   }
 
+  &__item {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
   &__link {
     display: inline-block;
     width: 100%;
-    padding: 1.25em 0;
     color: #fff;
-    border-bottom: 1px solid #fff;
 
     // MEDIA QUERY
     @include laptop {

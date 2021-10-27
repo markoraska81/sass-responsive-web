@@ -37,7 +37,7 @@ p {
 img {
   display: block;
   width: 100%;
-  min-width: 100%;
+  max-width: 100%;
 }
 
 ul {
@@ -300,12 +300,17 @@ a {
     padding: 1rem 0;
   }
 }
+.footer-menu__item {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #fff;
+}
+.footer-menu__item:last-child {
+  border-bottom: 0;
+}
 .footer-menu__link {
   display: inline-block;
   width: 100%;
-  padding: 1.25em 0;
   color: #fff;
-  border-bottom: 1px solid #fff;
 }
 @media (min-width: 1024px) {
   .footer-menu__link {
